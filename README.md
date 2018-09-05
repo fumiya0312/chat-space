@@ -14,7 +14,6 @@
 - has_many ::user_groups
 
 
-
 ## messagesテーブル
 
 |Column  |Type      |Options                       |
@@ -29,7 +28,6 @@
 - belongs_to :user
 
 
-
 ## user_groupsテーブル
 
 |Column |Type|Options                              |
@@ -42,7 +40,6 @@
 - belongs_to :user
 
 
-
 ## groupsテーブル
 
 |Column |Type      |Options                       |
@@ -53,3 +50,4 @@
 ### Association
 - has_many :users, through: :user_groups
 - has_many :messages
+- has_many ::user_groups
