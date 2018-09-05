@@ -25,40 +25,39 @@ Things you may want to cover:
 
 ## usersテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false |
-|emaile|string|null: true |
-|pass|string|null: true |
+|Column|Type  |Options     |
+|------|----  |-------     |
+|name  |string|null: false |
+|emaile|string|null: false |
+|pass  |string|null: false |
 
 ### Association
-- belongs_to :group
+- has_many :groups, through: :user_groups
 - has_many :messages
 
 
 
 ## messagesテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|message|text|null: false |
-|image|text|null: true |
-|group_id|integer|null: false, foreign_key: true|
+|Column  |Type      |Options                       |
+|------  |----      |-------                       |
+|user_id |references|null: false, foreign_key: true|
+|message |text      |null: false                   |
+|image   |text      |null: true                    |
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
-- belongs_to :member
 
 
 
-## membersテーブル
+## user_groupsテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|Column |Type|Options|
+|------ |----|-------|
+|user_id |references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -68,14 +67,12 @@ Things you may want to cover:
 
 ## groupsテーブル
 
-|Column|Type|Options|
-|------|----|-------|
-|groups_name|string|null: false,|
-|member_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|Column |Type      |Options    |
+|------ |----      |-------    |
+|name   |string    |null: false|
+|user_id|references|null: false, foreign_key: true|
 
 
 ### Association
-- has_many :users
+- has_many :users, through: :user_groups
 - has_many :messages
-- has_many :members
