@@ -1,12 +1,12 @@
-
+# README
 
 ## usersテーブル
 
-|Column|Type  |Options                               |
-|------|----  |-------                               |
-|name  |string|null: false, index: true, unique: true|
-|emaile|string|null: false                           |
-|pass  |string|null: false                           |
+|Column  |Type  |Options                               |
+|------  |----  |-------                               |
+|name    |string|null: false, index: true, unique: true|
+|email   |string|null: false, unique: true             |
+|password|string|null: false                           |
 
 ### Association
 - has_many :groups, through: :user_groups
