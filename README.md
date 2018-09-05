@@ -27,9 +27,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
 |name|string|null: false |
-|group_id|integer|null: false, foreign_key: true|
+|emaile|string|null: true |
+|pass|string|null: true |
 
 ### Association
 - belongs_to :group
@@ -62,8 +62,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :group
-- has_many :users
-- has-many :messages
+- belongs_to :user
 
 
 
@@ -71,44 +70,12 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false, foreign_key: true|
+|groups_name|string|null: false,|
 |member_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
+
 
 ### Association
 - has_many :users
 - has_many :messages
 - has_many :members
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
