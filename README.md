@@ -2,11 +2,11 @@
 
 ## usersテーブル
 
-|Column|Type  |Options                                |
-|------|----  |-------                                |
-|name  |string|null: false, index: true, unique: true |
-|emaile|string|null: false                            |
-|pass  |string|null: false                            |
+|Column|Type  |Options                               |
+|------|----  |-------                               |
+|name  |string|null: false, index: true, unique: true|
+|emaile|string|null: false                           |
+|pass  |string|null: false                           |
 
 ### Association
 - has_many :groups, through: :user_groups
@@ -20,7 +20,7 @@
 |------  |----      |-------                       |
 |user_id |references|null: false, foreign_key: true|
 |message |text      |null: false                   |
-|image   |text      |null: true                    |
+|image   |text      |
 |group_id|references|null: false, foreign_key: true|
 
 ### Association
@@ -47,7 +47,6 @@
 |Column |Type      |Options                       |
 |------ |----      |-------                       |
 |name   |string    |null: false, index: true      |
-|user_id|references|null: false, foreign_key: true|
 
 
 ### Association
