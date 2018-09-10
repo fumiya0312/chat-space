@@ -1,0 +1,52 @@
+.sidebar {
+   @include main-block(100vh, 300px, fixed);
+  &__name {
+    @include block(#253141, 100px, calc(100% - 40px));
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 100px;
+    position: absolute;
+    top: 0;
+    padding: 0 20px;
+    clear: both;
+  }
+  .font-icon {
+    display: block;
+    float: right;
+    .fa-pencil-square-o {
+      display: block;
+      padding-top: 40px;
+      color: white;
+      // float: left;
+      position: absolute;
+    }
+    .fa-cog {
+      display: inline-block;
+      margin-top: 40px;
+      margin-left: 20px;
+      float: right;
+      color: white;
+      }
+  }
+    .side-group {
+      @include block(#2f3e51, calc(100vh - 100px), calc(100% - 40px));
+      color: $side-color;
+      position: absolute;
+      bottom: 0;
+      padding: 0 20px;
+      &_list {
+        &_name {
+          padding: 20px 0;
+          .side-name {
+            @include font(15px, $side-color);
+            margin-bottom: 5px;
+          }
+          .side-text {
+            @include font(11px, $side-color);
+          }
+        }
+      }
+    }
+}
+

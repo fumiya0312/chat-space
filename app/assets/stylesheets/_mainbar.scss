@@ -1,0 +1,81 @@
+.mainbar {
+  @include block(white, 100vh, calc(100vw - 300px));
+  position: fixed;
+  left: 300px;
+
+  .main-chat_header {
+    @include block(white, 100px - 1px, 100%);
+    border: solid;
+    border-color: #eeeeee;
+    border-width: 0 0 1px 0;
+    padding: 0 40px;
+    .main-group {
+      @include font(20px, #333333);
+      padding-top: 35px;
+      margin-bottom: 15px;
+    }
+    .main-member {
+      @include font(12px, $main-font-color);
+    }
+    .edit_button{
+      position: absolute;
+      top: 28px;
+      right: 40px;
+      height: 40px;
+      width: 70px;
+      border: solid;
+      color: $button-color;
+      border-width: 1px 1px 1px 1px;
+      text-align: center;
+      line-height: 39px;
+    }
+  }
+  .main-chat {
+    height: calc( 100vh - 99px - 90px - 26px);
+    padding: 0 40px;
+    padding-top: 26px;
+    overflow: scroll;
+    .main-sub {
+      padding: 20px 0;
+      .main-name {
+        @include font(16px, $main-color);
+        margin-bottom: 10px;
+        font-weight: bold;
+        display: inline-block;
+      }
+      .main-time {
+        @include font(12px, $main-font-color);
+        padding-left: 10px;
+        display: inline-block;
+      }
+      .main-text {
+        @include font(14px, $main-color);
+      }
+    }
+  }
+  .main-chat_footer {
+    background-color: #B8C3C7;
+     padding: 20px 40px;
+     display: flex;
+    .text-box {
+      background-color: $side-color;
+      flex-grow: 1;
+      line-height: 50px;
+      padding-left: 10px
+    }
+    .text-icon {
+      background-color: $side-color;
+      width: 50px;
+      padding-top: 13px;
+      padding-left: 23px;
+      box-sizing: border-box;
+    }
+    .send-button {
+        @include block($button-color, 50px, 100px);
+        margin-left: 10px;
+        text-align: center;
+        color: $side-color;
+        line-height: 50px;
+    }
+  }
+}
