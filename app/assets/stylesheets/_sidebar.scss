@@ -18,13 +18,10 @@
       display: block;
       padding-top: 40px;
       color: white;
-      // float: left;
       position: absolute;
     }
     .fa-cog {
-      display: inline-block;
-      margin-top: 40px;
-      margin-left: 20px;
+      @include far-cog;
       float: right;
       color: white;
       }

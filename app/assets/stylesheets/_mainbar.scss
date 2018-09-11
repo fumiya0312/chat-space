@@ -64,10 +64,7 @@
       padding-left: 10px
     }
     .text-icon {
-      background-color: $side-color;
-      width: 50px;
-      padding-top: 13px;
-      padding-left: 23px;
+      @include text-icon;
       box-sizing: border-box;
     }
     .send-button {

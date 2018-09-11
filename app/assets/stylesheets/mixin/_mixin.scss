@@ -15,7 +15,21 @@
   color: $color;
 }
 
-// // #sidebar-color
+@mixin text-icon {
+  background-color: $side-color;
+  width: 50px;
+  padding-top: 13px;
+  padding-left: 23px;
+}
+
+@mixin far-cog {
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+
+// // #sidebar- color
 // $side-color: #;
 $side-color: #FFFFFF;
 $main-font-color: #999999;
