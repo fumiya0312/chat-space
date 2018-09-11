@@ -1,0 +1,37 @@
+@mixin main-block($height, $width, $position) {
+  height: $height;
+  width: $width;
+  position: $position;
+}
+
+@mixin block($bgcolor, $height, $width ) {
+  background-color: $bgcolor;
+  height: $height;
+  width: $width;
+}
+
+@mixin font($font-size, $color){
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin text-icon {
+  background-color: $side-color;
+  width: 50px;
+  padding-top: 13px;
+  padding-left: 23px;
+}
+
+@mixin far-cog {
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+
+// // #sidebar- color
+// $side-color: #;
+$side-color: #FFFFFF;
+$main-font-color: #999999;
+$main-color: #434A54;
+$button-color: #38AEF0;
