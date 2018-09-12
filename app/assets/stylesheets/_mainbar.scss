@@ -24,7 +24,7 @@
       height: 40px;
       width: 70px;
       border: solid;
-      color: $button-color;
+      color: $light_blue;
       border-width: 1px 1px 1px 1px;
       text-align: center;
       line-height: 39px;
@@ -38,7 +38,7 @@
     .main-sub {
       padding: 20px 0;
       .main-name {
-        @include font(16px, $main-color);
+        @include font(16px, $black);
         margin-bottom: 10px;
         font-weight: bold;
         display: inline-block;
@@ -49,7 +49,7 @@
         display: inline-block;
       }
       .main-text {
-        @include font(14px, $main-color);
+        @include font(14px, $black);
       }
     }
   }
@@ -68,7 +68,7 @@
       box-sizing: border-box;
     }
     .send-button {
-        @include block($button-color, 50px, 100px);
+        @include block($light_blue, 50px, 100px);
         margin-left: 10px;
         text-align: center;
         color: $side-color;
