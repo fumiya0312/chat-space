@@ -1,9 +1,9 @@
 @import "./reset";
+@import "./config/colors";
 @import "./mixins/mixin";
-@import "./config/variable";
+// @import "./config/variable";
 @import "./contents";
 @import "./mainbar";
 @import "./sidebar";
 @import "font-awesome";
-@import "config/colors";
 @import "modules/user";
