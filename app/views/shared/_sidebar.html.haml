@@ -10,8 +10,8 @@
           = fa_icon 'cog', class: 'icon'
   .side-group
     - current_user.groups.each do |group|
-      .side-group_list
-        = link_to group_messages_path(group) do
+      = link_to group_messages_path(group) do
+        .side-group_list_name
           .side-name
             = group.name
           .side-text
