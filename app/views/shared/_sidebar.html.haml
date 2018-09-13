@@ -3,20 +3,16 @@
     = current_user.name
     %ul.font-icon
       %li
-        = link_to "#" do
-          %i.fa.fa-pencil-square-o
+        = link_to new_group_path do
+          = fa_icon 'pencil-square-o', class: 'icon'
       %li
         = link_to edit_user_path(current_user) do
           = fa_icon 'cog', class: 'icon'
   .side-group
-    .side-group_list
-      .side-group_list_name
-        .side-name
-          チーム
-        .side-text
-          aaaaaaaaaa
-      .side-group_list_name
-        .side-name
-          チームA
-        .side-text
-          aaaaaaaaaa
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .side-group_list_name
+          .side-name
+            = group.name
+          .side-text
+            メッセージはまだありません。
