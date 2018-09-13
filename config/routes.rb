@@ -6,6 +6,3 @@ Rails.application.routes.draw do
       resources :messages, only: [:index, :create]
   end
 end
-
-#group controller 作成
-#message,user controller定義
