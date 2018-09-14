@@ -1,9 +1,10 @@
 .mainbar
   .main-chat_header
     .main-group
-      チーム名
+      = @group.name
     .main-member
-      Member：Fumiya0312
+      - @members.each do |member|
+        = member.name
     .edit_button
       = link_to 'Edit', edit_group_path(@group)
   .main-chat
