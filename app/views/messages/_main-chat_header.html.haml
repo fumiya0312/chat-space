@@ -1,0 +1,8 @@
+.main-chat_header
+  .main-group
+    = @group.name
+  .main-member
+    - @group.users.each do |member|
+      = member.name
+  .edit_button
+    = link_to 'Edit', edit_group_path(@group)
