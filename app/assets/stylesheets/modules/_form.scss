@@ -1,0 +1,39 @@
+.form {
+    background-color: $light_gray;
+    padding: 20px 40px;
+    height: 50px;
+    width: calc(100% - 80px);
+    float: left;
+    position: bottom;
+
+    &__message {
+      background-color: $side-color;
+      border: none;
+      float: left;
+      height: 50px;
+      padding-left: 10px;
+      width: calc(100% - 100px - 50px - 25px);
+    }
+
+    &__mask {
+      float: left;
+      line-height: 50px;
+      padding-right: 10px;
+      background-color: $white;
+    }
+
+
+    .hidden {
+      display: none;
+    }
+
+    .form__submit {
+      @include block($light_blue, 50px, 100px);
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 25px;
+      float: right;
+      color: $side-color;
+      line-height: 50px;
+    }
+  }
