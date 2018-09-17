@@ -7,6 +7,6 @@
         = message.created_at
       .main-text
         - if message.content.present?
-          %p.main-text__content
+          .main-text__content
             = message.content
         = image_tag message.image.url, class: 'main_text__image 'if message.image.present?
