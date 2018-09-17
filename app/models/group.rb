@@ -4,4 +4,6 @@ class Group < ApplicationRecord
   has_many :messages
   validates :name, presence: true
   #nameの検査、presence: trueで存在しないといけない
+
+
 end
