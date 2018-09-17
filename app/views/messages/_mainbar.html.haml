@@ -1,33 +1,4 @@
 .mainbar
-  .main-chat_header
-    .main-group
-      = @group.name
-    .main-member
-      - @members.each do |member|
-        = member.name
-    .edit_button
-      = link_to 'Edit', edit_group_path(@group)
-  .main-chat
-    .main-sub
-      .main-name
-        fumiya
-      .main-time
-        2018/09/08 00:00:00
-      .main-text
-        初めまして
-    .main-sub
-      .main-name
-        fumiya
-      .main-time
-        2018/09/08 00:00:00
-      .main-text
-        初めまして
-  .main-chat_footer
-    .text-box
-      aaaaaa
-    .text-icon
-      %label
-        %i.fa.fa-file-picture-o
-          %input{type:"file", style: "display:none"}/
-    .send-button
-      Send
+  = render 'main-chat_header'
+  = render 'main-chat'
+  = render 'form'
