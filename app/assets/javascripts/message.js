@@ -23,7 +23,6 @@ $(function() {
       contentType: false
     })
     .done(function(data) {
-      console.log("テスト")
       var html = buildHTML(data);
       $('.main-chat').append(html);
       $('.form__message').val('');
