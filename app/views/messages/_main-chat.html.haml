@@ -1,12 +1,2 @@
 .main-chat
-  .main-sub
-    - @messages.each do |message|
-      .main-name
-        = message.user.name
-      .main-time
-        = message.created_at
-      .main-text
-        - if message.content.present?
-          .main-text__content
-            = message.content
-        = image_tag message.image.url, class: 'main_text__image 'if message.image.present?
+  = render @messages

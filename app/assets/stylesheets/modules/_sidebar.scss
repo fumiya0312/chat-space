@@ -28,6 +28,7 @@
   }
     .side-group {
       @include block(#2f3e51, calc(100vh - 100px), calc(100% - 40px));
+      overflow: auto;
       color: $side-color;
       position: absolute;
       bottom: 0;
