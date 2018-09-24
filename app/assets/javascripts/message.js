@@ -27,11 +27,12 @@ $(function() {
       $('.main-chat').append(html);
       $('.form__message').val('');
       $('#new_message')[0].reset();
+      $('.form__submit').attr("disabled",false)
       $(".main-chat").animate({scrollTop: $(".main-chat")[0].scrollHeight}, 1000, "swing");
     })
     .fail(function(){
+      $('.form__submit').attr("disabled",false)
       alert('error');
     })
-    return false;
   })
 })
