@@ -25,12 +25,13 @@ $(function() {
     .done(function(data) {
       var html = buildHTML(data);
       $('.main-chat').append(html);
-      $('.form__message').val('');
+      $('#new_message')[0].reset();
+      $('.form__submit').attr("disabled",false)
+      // #送信ボタンの二度押し可能
       $(".main-chat").animate({scrollTop: $(".main-chat")[0].scrollHeight}, 1000, "swing");
     })
     .fail(function(){
       alert('error');
     })
-    return false;
   })
 })
