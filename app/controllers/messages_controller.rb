@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
     @messages = @group.messages.includes(:user)
       respond_to do |format|
         format.html
-        format.json{ @new_messages = Message.where("id > ?", params[:id] )}
+        format.json{ @new_messages = @messages.where("id > ?", params[:id] )}
         # binding.pry
 
       #自動更新の
@@ -23,7 +23,7 @@ class MessagesController < ApplicationController
       end
     else
       @messages = @group.messages.includes(:user)
-      render :index ,alert: 'メッセージを入力してください。'
+      redirect_to :index ,alert: 'メッセージを入力してください。'
     end
   end
 
