@@ -30,11 +30,11 @@ $(function() {
       .done(function(users) {
         $("#user-search-result").empty();
         if (users.length !== 0) {
-          // #user検索入力に文字数が０でなければユーザー情報をappendする
+          // #user検索入力の結果が０人でなければユーザー情報をappendする。上記usersはjbuilderから。
           users.forEach(function(user) {
             appendUser(user);
           });
-         }
+        }
          else {
            appendNoUser("一致するユーザーはいません");
          }

@@ -1,4 +1,4 @@
-.main-sub
+.main-sub{'data-id': message.id }
   .main-name
     = message.user.name
   .main-time
@@ -7,4 +7,4 @@
     - if message.content.present?
       .main-text__content
         = message.content
-    = image_tag message.image.url, class: 'main_text__image 'if message.image.present?
+    = image_tag message.image.url, class: 'main_text__image' if message.image.present?
