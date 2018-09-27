@@ -19,3 +19,4 @@
 public/uploads/*
 
 config/environments/production.rb
+config/secrets.yml
